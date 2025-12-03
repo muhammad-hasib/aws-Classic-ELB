@@ -21,7 +21,7 @@ Use-case: Testing load balancing / high-availability / failover for simple stati
 7. Access load balancer DNS (or configured domain) — traffic will be distributed between your two backend servers serving the static sites.  
 
 ## 📚 ELB Setup (AWS) — Key Steps
-- Create a load balancer (e.g. Application Load Balancer).  
+- Create a load balancer (e.g. Classsic Load Balancer).  
 - Define subnets, security-groups, and set up listener (HTTP port 80 / HTTPS as needed).  
 - Create a target group, register both server instances as targets.  
 - Configure health check settings.  
@@ -36,4 +36,5 @@ Use-case: Testing load balancing / high-availability / failover for simple stati
 - Don’t commit private keys, credentials, or sensitive info to GitHub.  
 - Use relative paths and environment-agnostic configs where possible.  
 - Document any custom port, SSL, firewall or DNS configuration you apply.  
+
 
