@@ -63,9 +63,9 @@ If you don’t want to use the wizard (or you are using IaC / CLI / Terraform), 
 
 ## 🧹 Cleanup & Post-Migration Tasks
 
-- Once traffic is fully routed to ALB and everything works correctly, **delete the old Classic Load Balancer** to avoid unnecessary charges. :contentReference[oaicite:24]{index=24}  
-- Update any automation / infrastructure-as-code / scripts / CloudFormation / CI/CD tools: replace references to Classic ELB (API `elb`) with the new ALB (`elbv2`) APIs or resource types. :contentReference[oaicite:25]{index=25}  
-- Update monitoring/metrics dashboards if you referenced CLB metrics (`AWS/ELB` namespace) — for ALB use the new namespace (`AWS/ApplicationELB`). :contentReference[oaicite:26]{index=26}  
+- Once traffic is fully routed to ALB and everything works correctly, **delete the old Classic Load Balancer** to avoid unnecessary charges.  
+- Update any automation / infrastructure-as-code / scripts / CloudFormation / CI/CD tools: replace references to Classic ELB (API `elb`) with the new ALB (`elbv2`) APIs or resource types. 
+- Update monitoring/metrics dashboards if you referenced CLB metrics (`AWS/ELB` namespace) — for ALB use the new namespace (`AWS/ApplicationELB`).
 
 ---
 
@@ -87,10 +87,10 @@ If you don’t want to use the wizard (or you are using IaC / CLI / Terraform), 
 
 ## ℹ️ Notes & Caveats
 
-- The migration wizard creates a **new** ALB — it does *not* convert the CLB in place. The old CLB will continue to exist until you manually delete it.  
-- If your CLB used only one subnet, you must specify a second subnet when migrating — ALB requires at least two subnets. :contentReference[oaicite:28]{index=28}  
-- Some CLB settings may not map exactly to ALB (e.g. TCP/SSL health-checks under CLB may get translated to HTTP health-checks during migration). :contentReference[oaicite:29]{index=29}  
-- Tags whose keys start with `aws:` are not migrated automatically — you may need to re-apply them manually if needed. :contentReference[oaicite:30]{index=30}  
+- The migration wizard creates a **new** ALB — it does *not* convert the CLB in place. The old CLB will continue to exist until you manually delete it.  <img width="1592" height="261" alt="image" src="https://github.com/user-attachments/assets/5efa9cd9-a9d2-4959-90ca-daaa09849537" />
+- If your CLB used only one subnet, you must specify a second subnet when migrating — ALB requires at least two subnets.
+- Some CLB settings may not map exactly to ALB (e.g. TCP/SSL health-checks under CLB may get translated to HTTP health-checks during migration).
+- Tags whose keys start with `aws:` are not migrated automatically — you may need to re-apply them manually if needed. 
 
 ---
 
