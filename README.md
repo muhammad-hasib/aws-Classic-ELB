@@ -27,14 +27,7 @@ Use-case: Testing load balancing / high-availability / failover for simple stati
 - Configure health check settings.  
 - After target status becomes healthy, requests to the load balancer will route to either of the servers.  
 
-## ✅ Why This Setup
-- Demonstrates basic load-balancing with static content  
-- Easy to replicate — only static files + Nginx + ELB  
-- Helps in testing distribution, failover, and basic HA behaviour  
 
-## 📝 Notes & Tips
-- Don’t commit private keys, credentials, or sensitive info to GitHub.  
-- Use relative paths and environment-agnostic configs where possible.  
-- Document any custom port, SSL, firewall or DNS configuration you apply.  
+
 
 
