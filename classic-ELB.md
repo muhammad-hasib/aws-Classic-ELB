@@ -37,5 +37,7 @@
    - Click **Create Load Balancer** to finish. :contentReference[oaicite:9]{index=9}
 
 10. **Test the setup**  
-    - Copy the ELB’s public DNS name (something like `my-load-balancer-1234567890.region.elb.amazonaws.com`) from EC2 console.  
+    - Copy the ELB’s public DNS name (something like `my-load-balancer-1234567890.region.elb.amazonaws.com`) from EC2 console.
+    - <img width="1869" height="1061" alt="image" src="https://github.com/user-attachments/assets/b96db19d-8e99-473b-9545-e3f163c4f1e7" />
     - Paste it in a web browser (from Internet). If configured correctly, you should see your server’s default web page. This confirms ELB is working. :contentReference[oaicite:10]{index=10}
+
